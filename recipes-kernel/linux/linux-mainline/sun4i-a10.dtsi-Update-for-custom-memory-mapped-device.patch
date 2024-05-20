@@ -1,0 +1,30 @@
+From b9f4266b2d240396ec1f138becc1b4ea5cfba1d8 Mon Sep 17 00:00:00 2001
+From: Strahinja Jankovic <strahinja.p.jankovic@gmail.com>
+Date: Tue, 14 May 2024 22:43:08 +0200
+Subject: [PATCH] sun4i-a10.dtsi: Update for custom memory-mapped device
+
+Signed-off-by: Strahinja Jankovic <strahinja.p.jankovic@gmail.com>
+---
+ arch/arm/boot/dts/allwinner/sun4i-a10.dtsi | 6 ++++++
+ 1 file changed, 6 insertions(+)
+
+diff --git a/arch/arm/boot/dts/allwinner/sun4i-a10.dtsi b/arch/arm/boot/dts/allwinner/sun4i-a10.dtsi
+index 51a6464aab9a..dc0a35cad301 100644
+--- a/arch/arm/boot/dts/allwinner/sun4i-a10.dtsi
++++ b/arch/arm/boot/dts/allwinner/sun4i-a10.dtsi
+@@ -1043,6 +1043,12 @@ ps21: ps2@1c2a400 {
+ 			status = "disabled";
+ 		};
+ 
++		mmsens: mmsens@1c2a800 {
++			compatible = "mistra,mmsens";
++			reg = <0x01c2a800 0x400>;
++			interrupts = <36>;
++		};
++
+ 		i2c0: i2c@1c2ac00 {
+ 			compatible = "allwinner,sun4i-a10-i2c";
+ 			reg = <0x01c2ac00 0x400>;
+-- 
+2.34.1
+
