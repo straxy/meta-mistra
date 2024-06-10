@@ -1,6 +1,6 @@
 require recipes-core/images/core-image-minimal.bb
 
-IMAGE_INSTALL += "\
+IMAGE_INSTALL:append = "\
     lighttpd \
     i2c-tools \
 "
