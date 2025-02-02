@@ -1,18 +1,18 @@
 require recipes-core/images/core-image-minimal.bb
 
 INITRAMFS_SCRIPTS ?= "\
-    initramfs-boot \
+    initramfs-mistra \
 "
 
 PACKAGE_INSTALL = " \
     ${INITRAMFS_SCRIPTS} \
     ${VIRTUAL-RUNTIME_base-utils} \
-    ${VIRTUAL-RUNTIME_dev_manager} \
     libubootenv-bin \
     swupdate \
     swupdate-www \
     base-passwd \
     openssl \
+    util-linux-sfdisk \
     ${ROOTFS_BOOTSTRAP_INSTALL} \
 "
 

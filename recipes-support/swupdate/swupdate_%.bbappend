@@ -9,11 +9,7 @@ SRC_URI += " \
     file://signature.cfg \
     file://${TOPDIR}/../sources/meta-mistra/certs/mistra-test.cert.pem \
     file://upgrade-done.service \
-    ${@bb.utils.contains('DISTRO_FEATURES', 'systemd', 'file://systemd.cfg', 'file://recovery.cfg', d)} \
-"
-
-SRC_URI:mistra-recovery += "\
-    file://recovery.cfg \
+    ${@bb.utils.contains('DISTRO_FEATURES', 'systemd', 'file://systemd.cfg', '', d)} \
 "
 
 SYSTEMD_SERVICE:${PN} += " upgrade-done.service"
