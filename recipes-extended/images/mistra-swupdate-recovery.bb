@@ -13,6 +13,7 @@ PACKAGE_INSTALL = " \
     base-passwd \
     openssl \
     util-linux-sfdisk \
+    e2fsprogs-mke2fs \
     ${ROOTFS_BOOTSTRAP_INSTALL} \
 "
 
@@ -32,3 +33,11 @@ inherit core-image
 
 IMAGE_ROOTFS_SIZE = "8192"
 IMAGE_ROOTFS_EXTRA_SPACE = "0"
+
+do_rootfs[depends] += "u-boot:do_deploy"
+
+add_uboot_initial_env() {
+    install -d ${IMAGE_ROOTFS}${sysconfdir}
+    install -m 0644 ${DEPLOY_DIR_IMAGE}/u-boot-initial-env ${IMAGE_ROOTFS}${sysconfdir}
+}
+ROOTFS_POSTPROCESS_COMMAND += "add_uboot_initial_env; "
