@@ -15,9 +15,16 @@ SRC_URI = "\
 "
 
 # images to build before building swupdate image
-IMAGE_DEPENDS = "mistra-swupdate"
+IMAGE_DEPENDS = "\
+    virtual/bootloader \
+    mistra-swupdate \
+"
 
 # images and files that will be included in the .swu image
-SWUPDATE_IMAGES = "mistra-swupdate-cubieboard-ng.rootfs"
+SWUPDATE_IMAGES = "\
+    ${SPL_BINARY} \
+    boot.scr \
+    mistra-swupdate-cubieboard-ng.rootfs \
+"
 
 SWUPDATE_IMAGES_FSTYPES[mistra-swupdate-cubieboard-ng.rootfs] = ".ext4.gz"

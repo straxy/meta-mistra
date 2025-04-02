@@ -1,0 +1,32 @@
+From 4162a7ec2ec6cc5664d8f22f54372294fea9010a Mon Sep 17 00:00:00 2001
+From: Strahinja Jankovic <strahinja.p.jankovic@gmail.com>
+Date: Mon, 28 Apr 2025 22:33:39 +0000
+Subject: [PATCH] sun4-a10-cubieboard.dts: Add SPI NOR flash
+
+Upstream-Status: Inappropriate [straxy testing]
+
+Signed-off-by: Strahinja Jankovic <strahinja.p.jankovic@gmail.com>
+---
+ arch/arm/dts/sun4i-a10-cubieboard.dts | 6 ++++++
+ 1 file changed, 6 insertions(+)
+
+diff --git a/arch/arm/dts/sun4i-a10-cubieboard.dts b/arch/arm/dts/sun4i-a10-cubieboard.dts
+index 0645d60642..fe3a6f2214 100644
+--- a/arch/arm/dts/sun4i-a10-cubieboard.dts
++++ b/arch/arm/dts/sun4i-a10-cubieboard.dts
+@@ -234,6 +234,12 @@
+ 	pinctrl-0 = <&spi0_pi_pins>,
+ 		    <&spi0_cs0_pi_pin>;
+ 	status = "okay";
++
++	flash: m25p80@0 {
++	  compatible = "issi,is25wp128", "jedec,spi-nor";
++	  spi-max-frequency = <20000000>;
++	  reg = <0>;
++	};
+ };
+ 
+ &uart0 {
+-- 
+2.44.1
+
