@@ -9,11 +9,8 @@ SRC_URI += " \
     file://signature.cfg \
     file://${TOPDIR}/../sources/meta-mistra/certs/mistra-test.cert.pem \
     file://upgrade-done.service \
-    "
-
-DEPENDS += " curl systemd "
-
-inherit systemd
+    ${@bb.utils.contains('DISTRO_FEATURES', 'systemd', 'file://systemd.cfg', '', d)} \
+"
 
 SYSTEMD_SERVICE:${PN} += " upgrade-done.service"
 FILES:${PN} += " ${systemd_unitdir}/system/upgrade-done.service"

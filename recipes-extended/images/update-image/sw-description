@@ -12,7 +12,13 @@ software =
                         sha256 = "$swupdate_get_sha256(mistra-swupdate-cubieboard-ng.rootfs.ext4.gz)";
                         compressed = "zlib";
                         device = "/dev/mmcblk0p2";
-                });
+                },
+                {
+                        filename = "u-boot-sunxi-with-spl.bin";
+                        sha256 = "$swupdate_get_sha256(u-boot-sunxi-with-spl.bin)";
+                        device = "/dev/mmcblk0";
+                        offset = "8K";
+                  });
                 scripts: ({
                         filename = "shellscript.sh";
                         type = "shellscript";
@@ -33,7 +39,13 @@ software =
                         sha256 = "$swupdate_get_sha256(mistra-swupdate-cubieboard-ng.rootfs.ext4.gz)";
                         compressed = "zlib";
                         device = "/dev/mmcblk0p3";
-                });
+                },
+                {
+                        filename = "u-boot-sunxi-with-spl.bin";
+                        sha256 = "$swupdate_get_sha256(u-boot-sunxi-with-spl.bin)";
+                        device = "/dev/mmcblk0";
+                        offset = "8K";
+                  });
                 scripts: ({
                         filename = "shellscript.sh";
                         type = "shellscript";
