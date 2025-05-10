@@ -16,7 +16,7 @@ create_data_dir() {
    mkdir -p ${IMAGE_ROOTFS}/data
 }
 
-IMAGE_PREPROCESS_COMMAND += "create_data_dir;"
+ROOTFS_POSTPROCESS_COMMAND += "create_data_dir;"
 
 WKS_FILES = "mistra-swupdate.wks.in"
 # Do not update fstab file when using wic images
