@@ -10,3 +10,10 @@ IMAGE_INSTALL:append:cubieboard-ng = "\
     mmsens-app \
     i2csens-app \
 "
+
+TOOLCHAIN_HOST_TASK:append = "\
+    nativesdk-rust \
+    nativesdk-cargo \
+"
+
+SDK_TOOLCHAIN_LANGS:append = " rust"
