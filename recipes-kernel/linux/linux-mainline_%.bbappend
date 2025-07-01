@@ -10,4 +10,5 @@ SRC_URI:append:mistra-recovery = "\
 
 SRC_URI:append:cubieboard-ng = "\
 	file://sun4i-a10.dtsi-Update-for-custom-memory-mapped-device.patch \
+  file://sun4i-cubieboard-Add-spidev-to-dts.patch \
 "
