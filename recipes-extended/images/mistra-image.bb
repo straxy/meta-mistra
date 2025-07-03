@@ -9,6 +9,7 @@ IMAGE_INSTALL:append:cubieboard-ng = "\
     kernel-module-mmsens-drv \
     mmsens-app \
     i2csens-app \
+    sens-apps \
 "
 
 TOOLCHAIN_HOST_TASK:append = "\
