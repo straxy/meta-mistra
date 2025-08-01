@@ -1,0 +1,30 @@
+From d2db732716d9c0f87cdce10d64e67f0c1b24324b Mon Sep 17 00:00:00 2001
+From: Strahinja Jankovic <strahinja.p.jankovic@gmail.com>
+Date: Fri, 1 Aug 2025 16:12:46 +0200
+Subject: [PATCH] cubieboard: Enable UART1 in DTS
+
+Signed-off-by: Strahinja Jankovic <strahinja.p.jankovic@gmail.com>
+---
+ arch/arm/boot/dts/allwinner/sun4i-a10-cubieboard.dts | 6 ++++++
+ 1 file changed, 6 insertions(+)
+
+diff --git a/arch/arm/boot/dts/allwinner/sun4i-a10-cubieboard.dts b/arch/arm/boot/dts/allwinner/sun4i-a10-cubieboard.dts
+index f71142432..1d4d7e711 100644
+--- a/arch/arm/boot/dts/allwinner/sun4i-a10-cubieboard.dts
++++ b/arch/arm/boot/dts/allwinner/sun4i-a10-cubieboard.dts
+@@ -247,6 +247,12 @@ &uart0 {
+ 	status = "okay";
+ };
+ 
++&uart1 {
++	pinctrl-names = "default";
++	pinctrl-0 = <&uart1_pins>;
++	status = "okay";
++};
++
+ &usb_otg {
+ 	dr_mode = "otg";
+ 	status = "okay";
+-- 
+2.43.0
+
