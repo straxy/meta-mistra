@@ -7,6 +7,7 @@ IMAGE_INSTALL:append = "\
 
 IMAGE_INSTALL:append:cubieboard-ng = "\
     kernel-module-mmsens-drv \
+    kernel-module-i2csens-drv \
     mmsens-app \
     i2csens-app \
     sens-apps \
