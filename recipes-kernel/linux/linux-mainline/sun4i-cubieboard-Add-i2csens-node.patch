@@ -1,0 +1,16 @@
+diff --git a/arch/arm/boot/dts/allwinner/sun4i-a10-cubieboard.dts b/arch/arm/boot/dts/allwinner/sun4i-a10-cubieboard.dts
+index 787e018f6..4f4de36ec 100644
+--- a/arch/arm/boot/dts/allwinner/sun4i-a10-cubieboard.dts
++++ b/arch/arm/boot/dts/allwinner/sun4i-a10-cubieboard.dts
+@@ -139,6 +139,11 @@ axp209: pmic@34 {
+ 		reg = <0x34>;
+ 		interrupts = <0>;
+ 	};
++
++	i2csens: sens@36 {
++		compatible = "mistra,i2csens";
++		reg = <0x36>;
++	};
+ };
+ 
+ &i2c1 {
