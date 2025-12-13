@@ -1,0 +1,24 @@
+// SPDX-License-Identifier: GPL-2.0-or-later OR MIT
+/*
+ * Copyright 2025 Strahinja Jankovic <strahinja@mistrasolutions.com>
+ */
+
+// CubieboardNG Custom QEMU SPI device
+
+/dts-v1/;
+/plugin/;
+
+/ {
+	compatible = "cubietech,a10-cubieboard", "allwinner,sun4i-a10";
+};
+
+&spi0 {
+	#address-cells = <1>;
+	#size-cells = <0>;
+	status = "okay";
+
+	spisens: sens@0 {
+		compatible = "mistra,spisens";
+		reg = <0>;
+	};
+};
