@@ -12,6 +12,7 @@ IMAGE_INSTALL:append:cubieboard-ng = "\
     mmsens-app \
     i2csens-app \
     sens-apps \
+    sens-app-mongoose \
 "
 
 TOOLCHAIN_HOST_TASK:append = "\

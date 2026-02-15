@@ -1,0 +1,11 @@
+[Unit]
+Description=Sensor Application Mongoose
+After=network.target
+
+[Service]
+Type=simple
+ExecStart=/usr/bin/sens-app-mongoose
+Restart=on-failure
+
+[Install]
+WantedBy=multi-user.target
