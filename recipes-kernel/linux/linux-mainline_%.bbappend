@@ -11,7 +11,6 @@ SRC_URI:append:mistra-recovery = "\
 
 SRC_URI:append:cubieboard-ng = "\
 	file://sun4i-a10.dtsi-Update-for-custom-memory-mapped-device.patch \
-	file://sun4i-cubieboard-Enable-UART1-in-DTS.patch \
 	file://cubieboard-ng-i2csens-overlay.dtso;subdir=linux-${PV}/arch/arm/boot/dts/allwinner \
 	file://cubieboard-ng-spidev-overlay.dtso;subdir=linux-${PV}/arch/arm/boot/dts/allwinner \
 	file://cubieboard-ng-spisens-overlay.dtso;subdir=linux-${PV}/arch/arm/boot/dts/allwinner \
