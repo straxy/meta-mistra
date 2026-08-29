@@ -17,4 +17,3 @@ ARM_INSTRUCTION_SET:mistra ??= "thumb"
 # Log information on images and packages
 INHERIT += "buildhistory"
 BUILDHISTORY_COMMIT = "1"
-

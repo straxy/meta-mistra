@@ -3,6 +3,8 @@ require recipes-core/images/core-image-minimal.bb
 IMAGE_INSTALL:append = "\
     lighttpd \
     i2c-tools \
+    libgpiod \
+    libgpiod-tools \
 "
 
 IMAGE_INSTALL:append:cubieboard-ng = "\
